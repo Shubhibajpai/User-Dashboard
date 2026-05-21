@@ -1,0 +1,154 @@
+.container {
+    background: black;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+  }
+  
+  .header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1c4980;
+    border-radius: 5px;
+    margin-top:0 0px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #383838;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding:0 20px;
+  }
+  .role-badge {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .role-admin {
+    background: #3D99E6;   
+  }
+  
+  .role-editor {
+    background: #FF5C77;   
+  }
+  
+  .role-viewer {
+    background: #FFA344;  
+  }
+  
+  button {
+    background: #1c4980;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+  
+  .dashboard-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .table-section,
+  .chart-section {
+    flex: 1;
+    background: #383838;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid #a09e9e;
+    height: 500px;
+    max-height: 500px;
+    overflow: hidden;
+  }
+
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #828181;
+  }
+  
+  th {
+    background: #1c4980;
+    color: white;
+    padding: 15px 0px;
+    font-family: Arial, "Times New Roman", Verdana;
+  }
+  
+  td {
+    padding: 14px 40px;
+    color: white;
+    font-family: Arial, "Times New Roman", Verdana;
+    font-size: 16px;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #bdbbbb;
+  }
+  .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .form-loading {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  .table-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table-wrapper {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+  
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: 12px;
+  }
+  
+  .pagination button {
+    min-width: 80px;
+  }
+  
+  .pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .page-info {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+  
+  .active-page {
+    background: #383838;
+    border: 1px solid white;
+  }

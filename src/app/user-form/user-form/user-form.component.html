@@ -1,0 +1,65 @@
+<div class="modal-content">
+
+    <h2>Add User</h2>
+    <hr/>
+    <form [formGroup]="userForm">
+     <label for="name" class="form-label">Name</label>
+      <input
+        id="name"
+        type="text"
+        placeholder=" Enter your name"
+        formControlName="name"
+        [class.invalid]="userForm.get('name')?.invalid && userForm.get('name')?.touched"
+      />
+      <p class="error" *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched">
+        Name is required
+      </p>
+
+      <label for="email" class="form-label">Email</label>
+      <input
+        id="email"
+        type="email"
+        placeholder=" Enter your email"
+        formControlName="email"
+        [class.invalid]="userForm.get('email')?.invalid && userForm.get('email')?.touched"
+      />
+      <p class="error" *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">
+        Email is required
+      </p>
+      <p class="error" *ngIf="userForm.get('email')?.hasError('email') && userForm.get('email')?.touched">
+        Enter a valid email
+      </p>
+
+      <label for="role" class="form-label">Role</label>
+      <select
+        id="role"
+        formControlName="role"
+        placeholder=" Select your role"
+        [class.invalid]="userForm.get('role')?.invalid && userForm.get('role')?.touched"
+      >
+  
+        <option value="">Select Role</option>
+  
+        <option value="Admin">Admin</option>
+  
+        <option value="Editor">Editor</option>
+  
+        <option value="Viewer">Viewer</option>
+  
+      </select>
+      <p class="error" *ngIf="userForm.get('role')?.hasError('required') && userForm.get('role')?.touched">
+        Role is required
+      </p>
+  <div class="button-container">
+      <button type="button" class="submit-button" (click)="submitForm()">
+        Submit
+      </button>
+  
+      <button type="button" class="close-button" (click)="closeModal()">
+        Close
+      </button>
+    </div>
+  
+    </form>
+  
+  </div>
